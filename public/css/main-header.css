@@ -1,0 +1,31 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-black-main);
+  padding: 0px 1rem;
+}
+
+.nav-logo {
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 0.5rem;
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-links{
+  color: var(--color-black-main);
+  padding: 20px 15px;
+  text-align: center;
+  display: block;
+  background-color: var(--color-white-bg);
+
+}
+
+.nav-links:hover{
+  opacity: 0.6;
+}

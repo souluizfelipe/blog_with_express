@@ -1,0 +1,22 @@
+.main-footer {
+  border-top: 1px solid var(--color-black-main);
+}
+
+.main-footer .nav-links{
+  color: var(--color-black-main);
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  background-color: var(--color-white-bg);
+
+}
+
+footer p {
+  padding: 10px;
+  text-align: center;
+}
+
+footer p a {
+  color: var(--color-black-main);
+  text-decoration: underline;
+}
