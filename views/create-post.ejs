@@ -7,6 +7,13 @@
  <%- include('partials/header') %> 
 
   <section class="main-section-post">
+    
+    
+    
+    <% if (newPost) { %>
+      <%- include('partials/success') %>
+    <% }; %>
+
     <form class="create-post-form" action="/posted" method="POST">
       <label class="label-section">
         Title
@@ -21,5 +28,6 @@
   </section>
 
  <%- include('partials/footer') %>
+ <%- include('partials/foot') %>
 </body>
 </html>
