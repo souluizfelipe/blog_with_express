@@ -2,6 +2,14 @@
   padding: 0px 32px;
 }
 
+.full-post {
+  border-bottom: 1px solid var(--color-black-main);
+}
+
+.full-post:last-child {
+  border-bottom:none;
+}
+
 .main-section-post .post-title {
   font-size: 2rem;
   color: var(--color-black-main);
@@ -15,7 +23,6 @@
   margin: 10px auto;
   text-align: justify;
   width: 75%;
-
 }
 
 .main-section-post .post-text:last-child {
