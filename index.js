@@ -1,4 +1,3 @@
-// const { timeLog } = require('console');
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -14,13 +13,14 @@ app.use(express.urlencoded({ extende: true }));
 
 app.get('/', (req, res) => {
   res.render('index', {
-    title: 'Duh!'
+    title: 'Duh!',
+    posts: JSON.parse(fs.readFileSync('./stored/posts.json')),
   });
 });
 
 app.get('/create-post', (req, res) => {
   res.render('create-post', {
-    title: 'Novo Post - Duh!'
+    title: 'Novo Post - Duh!',
   });
 });
 

@@ -7,30 +7,16 @@
  <%- include('partials/header') %> 
 
   <section class="main-section-post">
-    <article class="full-post">
-      <a class="article-link" href="#"><h1 class="post-title">A Blog Post</h1></a>
-      <p class="post-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ad animi saepe accusamus, earum, soluta non reprehenderit dignissimos quasi, reiciendis quis error neque ipsam et? Sed nemo vitae consequatur facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolore voluptatum consequatur ab veniam qui sequi quisquam atque amet aliquid ratione, perferendis eveniet. Ipsum hic molestiae eveniet blanditiis officia praesentium!
-      </p>
-      <p class="post-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ad animi saepe accusamus, earum, soluta non reprehenderit dignissimos quasi, reiciendis quis error neque ipsam et? Sed nemo vitae consequatur facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quis esse ex adipisci nostrum veritatis omnis saepe ut, molestias harum! Praesentium perferendis odio ipsa autem, cupiditate laudantium? Natus, porro ea. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti nihil esse cupiditate quas obcaecati ipsa aliquam quidem. Error ea distinctio laboriosam cumque corporis itaque nobis earum non quod magnam.
-      </p>
-      <p class="post-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ad animi saepe accusamus, earum, soluta non reprehenderit dignissimos quasi, reiciendis quis error neque ipsam et? Sed nemo vitae consequatur facere? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, est! Impedit officiis quia repellat totam praesentium atque temporibus hic, nam suscipit est. In voluptas maiores nesciunt porro eligendi, blanditiis velit.
-      </p>
-    </article>
-    <article class="full-post">
-      <a class="article-link" href="#"><h1 class="post-title">A Blog Post</h1></a>
-      <p class="post-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ad animi saepe accusamus, earum, soluta non reprehenderit dignissimos quasi, reiciendis quis error neque ipsam et? Sed nemo vitae consequatur facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolore voluptatum consequatur ab veniam qui sequi quisquam atque amet aliquid ratione, perferendis eveniet. Ipsum hic molestiae eveniet blanditiis officia praesentium!
-      </p>
-      <p class="post-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ad animi saepe accusamus, earum, soluta non reprehenderit dignissimos quasi, reiciendis quis error neque ipsam et? Sed nemo vitae consequatur facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quis esse ex adipisci nostrum veritatis omnis saepe ut, molestias harum! Praesentium perferendis odio ipsa autem, cupiditate laudantium? Natus, porro ea. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti nihil esse cupiditate quas obcaecati ipsa aliquam quidem. Error ea distinctio laboriosam cumque corporis itaque nobis earum non quod magnam.
-      </p>
-      <p class="post-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ad animi saepe accusamus, earum, soluta non reprehenderit dignissimos quasi, reiciendis quis error neque ipsam et? Sed nemo vitae consequatur facere? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, est! Impedit officiis quia repellat totam praesentium atque temporibus hic, nam suscipit est. In voluptas maiores nesciunt porro eligendi, blanditiis velit.
-      </p>
-    </article>
+    <% posts.forEach(post => { %>
+
+      <article class="full-post">
+        <h1 class="post-title"><%= post.title %></h1>
+        <p class="post-text">
+          <%= post.text %>
+        </p>
+      </article>   
+    
+      <% }) %>
   </section>
 
  <%- include('partials/footer') %>
