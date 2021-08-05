@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %> 
+  </head>
+<body>
+ <%- include('partials/header') %> 
+
+  <section class="main-section-post">
+    <form class="create-post-form" action="/posted" method="POST">
+      <label class="label-section">
+        Title
+        <input type="text" name="post-title" id="post-title">
+      </label>
+      <label class="label-section">
+        Text
+        <textarea name="post-text" id="post-text"></textarea>
+      </label>
+      <button class="post-button" type="submit">Postar</button>
+    </form>
+  </section>
+
+ <%- include('partials/footer') %>
+</body>
+</html>
