@@ -13,6 +13,10 @@
   display: block;
 }
 
+.nav-logo a {
+  color: var(--color-black-main);
+}
+
 .nav-list {
   display: flex;
 }
