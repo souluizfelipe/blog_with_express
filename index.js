@@ -10,19 +10,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  const { c } = req.query;
-
+app.get('/', (req, res) => {  
   res.render('index', {
     title: 'Duh!',
     posts: JSON.parse(fs.readFileSync('./stored/posts.json')).reverse(),
-    newPost: c,
   });
 });
 
 app.get('/create-post', (req, res) => {
+  const { c } = req.query;
+
   res.render('create-post', {
     title: 'Novo Post - Duh!',
+    newPost: c,
   });
 
 });
@@ -35,13 +35,13 @@ app.post('/posted', (req, res) => {
 
   posts.push({
     title,
-    text
+    text,
   });
 
   const postsString = JSON.stringify(posts);
   fs.writeFileSync('./stored/posts.json', postsString);
 
-  res.redirect('/?c=1');
+  res.redirect('/create-post?c=1');
 });
 
 
